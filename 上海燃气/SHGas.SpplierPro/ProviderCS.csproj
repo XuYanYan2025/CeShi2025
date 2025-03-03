@@ -1,0 +1,248 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F8AE7990-055E-49D4-8F88-37C82692F18A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ProviderCS</RootNamespace>
+    <AssemblyName>ProviderXml</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <ApplicationIcon>App.ico</ApplicationIcon>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common">
+      <HintPath>..\..\青浦燃气\QPGas.SpplierPro\bin\Debug\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Reportviewer.Winforms">
+      <HintPath>..\..\青浦燃气\QPGas.SpplierPro\bin\Debug\Microsoft.Reportviewer.Winforms.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EntityPrint.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmNeiWai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmNeiWai.Designer.cs">
+      <DependentUpon>FrmNeiWai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmChangJiaZX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmChangJiaZX.Designer.cs">
+      <DependentUpon>FrmChangJiaZX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IniFile.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmNeiWai.resx">
+      <DependentUpon>FrmNeiWai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmChangJiaZX.resx">
+      <DependentUpon>FrmChangJiaZX.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectFile.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SelectFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowDetails.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ShowDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="test.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="test.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>test.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ProviderXml.sys">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="XmlBuilder.CHM" />
+    <None Include="供应商文件生成程序操作说明书.doc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ProviderDate.cs" />
+    <Compile Include="SelectFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectFile.Designer.cs">
+      <DependentUpon>SelectFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShowDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowDetails.Designer.cs">
+      <DependentUpon>ShowDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="test.Designer.cs">
+      <DependentUpon>test.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Image\背景底图.gif" />
+    <None Include="Image\Exit_normal.gif" />
+    <None Include="Image\Help_normal.gif" />
+    <None Include="Image\Add_on.gif" />
+    <None Include="Image\Add_normal.gif" />
+    <None Include="Image\Delete_on.gif" />
+    <None Include="Image\Delete_normal.gif" />
+    <None Include="Image\BtnPrint_on.gif" />
+    <None Include="Image\btnPrint_normal.gif" />
+    <None Include="Image\Add_MultiNew.gif" />
+    <None Include="Image\Add_OnlyNew.gif" />
+    <None Include="Image\1.gif" />
+    <None Include="Image\2.gif" />
+    <Content Include="App.ico" />
+    <None Include="Image\btnClose_Close1.gif" />
+    <None Include="Image\BtnClose_on1.gif" />
+    <Content Include="Image\BtnClose_OK.gif" />
+    <Content Include="Image\Exit_on.gif" />
+    <None Include="Image\File_on.gif" />
+    <None Include="Image\File_normal.gif" />
+    <Content Include="Image\Help_on.gif" />
+    <Content Include="Image\XiuFu_on-.gif" />
+    <Content Include="Image\导入XML-normal.gif" />
+    <Content Include="Image\导入XML-on.gif" />
+    <None Include="Image\背景底图2.gif" />
+    <Content Include="MeterType.xml" />
+    <None Include="Properties\DataSources\MedcialCase.datasource" />
+    <None Include="Resources\bc.GIF" />
+    <None Include="Resources\sx.jpg" />
+    <None Include="Resources\PuTongB_On.jpg" />
+    <None Include="Resources\XiuZhengY_On.jpg" />
+    <None Include="Resources\XiuZhengY_Off.jpg" />
+    <None Include="Resources\PuTongB_Off.jpg" />
+    <None Include="Resources\ZhiNengB_On.jpg" />
+    <None Include="Resources\ZhiNengB_Off.jpg" />
+    <None Include="Resources\XiuFuB_Off.jpg" />
+    <None Include="Resources\bg01.png" />
+    <None Include="Resources\6m-dan.gif" />
+    <None Include="Resources\10m+.gif" />
+    <Content Include="Resources\bg02.png" />
+    <Content Include="Resources\导入XML-normal.gif" />
+    <Content Include="Resources\导入XML-on.gif" />
+    <None Include="Resources\添加大表.gif" />
+    <None Include="Resources\添加单个小表.gif" />
+    <None Include="Resources\添加多个小表.gif" />
+    <None Include="Resources\31.gif" />
+    <None Include="Resources\4.gif" />
+    <None Include="Resources\3.gif" />
+    <None Include="Resources\2.gif" />
+    <None Include="Resources\1.gif" />
+    <None Include="Resources\Big.gif" />
+    <None Include="Resources\Small.gif" />
+    <None Include="Resources\OnlyBig6.gif" />
+    <None Include="Resources\OnlyBig5.gif" />
+    <None Include="Resources\OnlyBig4.gif" />
+    <None Include="Resources\OnlyBig3.gif" />
+    <None Include="Resources\OnlyBig2.gif" />
+    <None Include="Resources\Multi2.gif" />
+    <None Include="Resources\OnlySmall2.gif" />
+    <None Include="Resources\OnlyBig1.gif" />
+    <None Include="Resources\Multi1.gif" />
+    <None Include="Resources\OnlySmall1.gif" />
+    <None Include="Resources\OnlyBig.gif" />
+    <None Include="Resources\OnlySmall.gif" />
+    <None Include="Resources\Multi.gif" />
+    <None Include="Image\New_normal.gif" />
+    <None Include="Image\New_on.gif" />
+    <None Include="Image\XiuFu_on.gif" />
+    <None Include="Image\XiuFu_normal.gif" />
+    <None Include="Image\Print_on.gif" />
+    <None Include="Image\Print_normal.gif" />
+    <None Include="Image\Save_on.gif" />
+    <None Include="Image\Save_normal.gif" />
+    <None Include="Resources\Back.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\XML\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

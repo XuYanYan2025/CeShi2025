@@ -1,0 +1,309 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="DummyDataSource">
+      <ConnectionProperties>
+        <ConnectString />
+        <DataProvider>SQL</DataProvider>
+      </ConnectionProperties>
+      <rd:DataSourceID>a0f67ebd-81e0-43eb-92dd-07badf0a449c</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <PageWidth>21cm</PageWidth>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>21cm</InteractiveWidth>
+  <rd:GridSpacing>0.25cm</rd:GridSpacing>
+  <rd:SnapToGrid>true</rd:SnapToGrid>
+  <Body>
+    <ColumnSpacing>1cm</ColumnSpacing>
+    <ReportItems>
+      <Table Name="table1">
+        <Left>0.75cm</Left>
+        <DataSetName>ProviderCS_MedcialCase</DataSetName>
+        <TableGroups>
+          <TableGroup>
+            <Grouping Name="table1_Group1">
+              <PageBreakAtEnd>true</PageBreakAtEnd>
+              <GroupExpressions>
+                <GroupExpression>=(RowNumber("table1") - 1)\Code.PageIndex(Fields!Ncount.Value)</GroupExpression>
+              </GroupExpressions>
+            </Grouping>
+          </TableGroup>
+        </TableGroups>
+        <Width>18cm</Width>
+        <Details>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="ID">
+                      <rd:DefaultName>ID</rd:DefaultName>
+                      <ZIndex>5</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Top>Solid</Top>
+                          <Left>Solid</Left>
+                        </BorderStyle>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontFamily>宋体</FontFamily>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!ID.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Ncount">
+                      <rd:DefaultName>Ncount</rd:DefaultName>
+                      <ZIndex>4</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Top>Solid</Top>
+                        </BorderStyle>
+                        <TextAlign>Left</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontFamily>宋体</FontFamily>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Code.ReturnNull(Fields!Ncount.Value)</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Emergy">
+                      <rd:DefaultName>Emergy</rd:DefaultName>
+                      <ZIndex>3</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Top>Solid</Top>
+                          <Left>None</Left>
+                          <Right>None</Right>
+                        </BorderStyle>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontFamily>宋体</FontFamily>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!Emergy.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Price">
+                      <rd:DefaultName>Price</rd:DefaultName>
+                      <ZIndex>2</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Top>Solid</Top>
+                          <Left>None</Left>
+                          <Right>None</Right>
+                        </BorderStyle>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontFamily>宋体</FontFamily>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!Price.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="BoxID">
+                      <rd:DefaultName>BoxID</rd:DefaultName>
+                      <ZIndex>1</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Top>Solid</Top>
+                          <Left>None</Left>
+                          <Right>Solid</Right>
+                        </BorderStyle>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontFamily>宋体</FontFamily>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!BoxID.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.63492cm</Height>
+            </TableRow>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ColSpan>5</ColSpan>
+                  <ReportItems>
+                    <Textbox Name="textbox1">
+                      <Style>
+                        <BorderStyle>
+                          <Bottom>Solid</Bottom>
+                          <Left>Solid</Left>
+                          <Right>Solid</Right>
+                        </BorderStyle>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontFamily>宋体</FontFamily>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!MeterID.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.63492cm</Height>
+            </TableRow>
+          </TableRows>
+        </Details>
+        <Style>
+          <NumeralLanguage>zh-CHS</NumeralLanguage>
+          <FontFamily>宋体</FontFamily>
+          <Language>zh-CN</Language>
+        </Style>
+        <TableColumns>
+          <TableColumn>
+            <Width>4.27933cm</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>0.26568cm</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>4.53938cm</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>4.26398cm</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>4.65162cm</Width>
+          </TableColumn>
+        </TableColumns>
+        <Height>1.26984cm</Height>
+      </Table>
+    </ReportItems>
+    <Height>28.2cm</Height>
+  </Body>
+  <PageHeader>
+    <Height>0.75cm</Height>
+    <PrintOnLastPage>true</PrintOnLastPage>
+    <PrintOnFirstPage>true</PrintOnFirstPage>
+  </PageHeader>
+  <rd:ReportID>f06be1c0-c4f8-4645-b3d1-eac3a13d8841</rd:ReportID>
+  <DataSets>
+    <DataSet Name="ProviderCS_MedcialCase">
+      <rd:DataSetInfo>
+        <rd:DataSetName>ProviderCS</rd:DataSetName>
+        <rd:ObjectDataSourceType>ProviderCS.MedcialCase, ProviderXml, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+        <rd:TableName>MedcialCase</rd:TableName>
+      </rd:DataSetInfo>
+      <Query>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+        <CommandText />
+        <DataSourceName>DummyDataSource</DataSourceName>
+      </Query>
+      <Fields>
+        <Field Name="ID">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>ID</DataField>
+        </Field>
+        <Field Name="Capacity">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>Capacity</DataField>
+        </Field>
+        <Field Name="Length">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>Length</DataField>
+        </Field>
+        <Field Name="MaxCapacity">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>MaxCapacity</DataField>
+        </Field>
+        <Field Name="BoxID">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>BoxID</DataField>
+        </Field>
+        <Field Name="Emergy">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>Emergy</DataField>
+        </Field>
+        <Field Name="MeterID">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>MeterID</DataField>
+        </Field>
+        <Field Name="Price">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>Price</DataField>
+        </Field>
+        <Field Name="Ncount">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>Ncount</DataField>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <Code>    Public Function PageIndex(ByVal l As Integer) As Integer
+        'Dim l As Integer = Len(s) \ 104
+        'If Len(s) Mod 104 &lt;&gt; 0 Then l = l + 1
+        Select Case l
+            Case 1
+                Return 22
+            Case 2
+                Return 17
+            Case 3
+                Return 14
+            Case 4
+                Return 11
+            Case 5
+                Return 10
+            Case 6
+                Return 8
+            Case 7
+                Return 7
+            Case 8
+                Return 7
+            Case 9
+                Return 6
+            Case 10
+                Return 5
+            Case 11
+                Return 5
+            Case 12
+                Return 5
+            Case 13
+                Return 4
+            Case Else
+                Return 1
+        End Select
+    End Function
+    Public Function ReturnNull(ByVal s As String) As String
+	Return ""
+    End Function
+</Code>
+  <Width>21cm</Width>
+  <InteractiveHeight>29.7cm</InteractiveHeight>
+  <Language>zh-CN</Language>
+  <PageFooter>
+    <Height>0.75cm</Height>
+    <PrintOnLastPage>true</PrintOnLastPage>
+    <PrintOnFirstPage>true</PrintOnFirstPage>
+  </PageFooter>
+  <PageHeight>29.7cm</PageHeight>
+</Report>

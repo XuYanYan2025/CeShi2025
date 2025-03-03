@@ -1,0 +1,20 @@
+﻿[SystemConfig]
+ApplicationServices=data source=.\SQLEXPRESS;Integrated Security=SSPI;AttachDBFilename=|DataDirectory|\aspnetdb.mdf;User Instance=true
+
+[JTProviderConfig]
+VersionStr=SHGAS#2022.08.20.01
+ProviderFileUrl=http://212.64.20.54:10086/File/SHGas.ProviderXml.exe
+ChangJiaXMLFileUrl=http://212.64.20.54:10086/ProviderDate.asmx
+ChangJiaXMLFileNeiWangUrl=http://192.168.127.70:10087/ProviderDate_JT.asmx
+ChangJiaXMLFileWaiWangUrl=http://122.152.213.240:29001/ProviderDate_JT.asmx
+
+[QPProviderConfig]
+VersionStr=QPGAS#2019.11.01.01
+ProviderFileUrl=http://212.64.20.54:10086/File/QPGas.ProviderXml.exe
+ChangJiaXMLFileUrl=http://212.64.20.54:10086/ProviderDate.asmx
+
+
+[DZProviderConfig]
+VersionStr=DZGAS#2019.01.01.01
+ProviderFileUrl=http://212.64.20.54:10086/File/DZGas.ProviderXml.exe
+ChangJiaXMLFileUrl=http://212.64.20.54:10086/Demo.XML

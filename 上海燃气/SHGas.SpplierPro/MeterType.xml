@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+	<Type Text="MeterProperty">
+		<Text Value="1" Type="CQ3000-CG4" Caliber="4"></Text>
+		<Text Value="2" Type="G6" Caliber="6"></Text>
+		<Text Value="3" Type="G10" Caliber="10"></Text>
+		<Text Value="4" Type="G16" Caliber="16"></Text>
+		<Text Value="5" Type="G25" Caliber="25"></Text>
+	</Type>
+	<Type Text="Provider">
+		<Text  Brand="爱拓利"  Value="B"></Text>
+	</Type>
+</root>
+ 
