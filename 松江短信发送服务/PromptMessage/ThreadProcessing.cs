@@ -4,12 +4,14 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Oracle.DataAccess.Client;
 using System;
+using System.CodeDom;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Runtime.CompilerServices;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading;
@@ -60,6 +62,12 @@ namespace PromptMessage
         /// 发送方式：2：号码内容不加密传输；4：号码内容时间加密传输
         /// </summary>
         static int FaSongFS = 4;
+
+        /// <summary>
+        /// 重启控制线程
+        /// </summary>
+        private static Thread _getToMessage_Restart;
+
 
         private static JavaScriptSerializer Jss = new JavaScriptSerializer();
 
@@ -115,7 +123,7 @@ namespace PromptMessage
 
                     MessageDataService messageDataService = new MessageDataService(MessageWebServiceUrl);
 
-                    DataTable smsMessageDT=new DataTable();
+                    DataTable smsMessageDT = new DataTable();
                     DateTime nowtime = DateTime.Now;
                     DateTime startTime = new DateTime();
                     DateTime endTime = new DateTime();
@@ -602,11 +610,16 @@ namespace PromptMessage
             catch (Exception ex)
             {
                 //程序出错，记入日志
-                WriterTextLog.WriteEntry("程序错误：" + ex.Message);
+                WriterTextLog.WriteEntry("程序错误：" + ex.Message + " \r\n#" + (searchInterval * 10).ToString() + "秒后服务即将进入重启阶段！");
+
+                //线程暂停休息时间
+                Thread.Sleep(searchInterval * 10 * 1000);
+                _getToMessage_Restart = new Thread(new ThreadStart(GetToMessageForMobileMASProc));
+                _getToMessage_Restart.Start();
+
             }
 
         }
-
 
         #region 移动MAS相关
 
